@@ -19,6 +19,11 @@ services:
       - mongodb
      
  client:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+
  mongodb:
 volumes:
 networks:
