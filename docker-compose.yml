@@ -25,6 +25,10 @@ services:
       dockerfile: Dockerfile
     image: client-image:v1.0  
     container_name: react-frontend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - server
 
  mongodb:
 volumes:
