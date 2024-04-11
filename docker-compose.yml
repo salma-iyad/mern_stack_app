@@ -4,6 +4,8 @@ services:
      build:
       context: ./server
       dockerfile: Dockerfile
+     image: server-image:v1.0
+     container_name: express-backend 
      
  client:
  mongodb:
