@@ -31,5 +31,7 @@ services:
       - server
 
  mongodb:
+    image: mongo:latest
+    container_name: mongodb_server
 volumes:
 networks:
