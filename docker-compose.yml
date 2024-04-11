@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
      image: server-image:v1.0
      container_name: express-backend 
+     ports:
+      - "5000:5000"
      
  client:
  mongodb:
