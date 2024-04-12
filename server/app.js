@@ -8,9 +8,7 @@ app.use(cors());
 app.use(express.json()); 
 
 app.get('/connect-mongodb', (req, res) => {
-  const mongoUri = `mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}` +
-                   `@mongodb_server:${process.env.MONGODB_DOCKER_PORT}/${process.env.MONGODB_DATABASE}` +
-                   `?authSource=admin`; // Adjust the authSource as needed
+  const mongoUri = `mongodb://mongodb_server:27017`; 
 
   mongoose.connect(mongoUri, {
     useNewUrlParser: true,

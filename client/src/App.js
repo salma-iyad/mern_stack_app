@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   const connectToMongoDB = () => {
-    fetch('http://localhost:3001/connect-mongodb')
+    fetch('http://localhost:5000/connect-mongodb')
       .then(response => response.json())
       .then(data => setMessage(data.message))
       .catch(error => setMessage("Erreur lors de la connexion au serveur"));

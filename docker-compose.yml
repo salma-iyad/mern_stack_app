@@ -5,9 +5,9 @@ services:
       context: ./server
       dockerfile: Dockerfile
      image: server-image:v1.0
-     container_name: express-backend 
+    #  container_name: express-backend 
      ports:
-      - "5000:5000"
+      - "4900-4910:5000"
      env_file: ./.env 
      environment:
       - DB_HOST=mongodb_server
@@ -28,15 +28,15 @@ services:
       context: ./client
       dockerfile: Dockerfile
     image: client-image:v1.0  
-    container_name: react-frontend
+    # container_name: react-frontend
     ports:
-      - "3000:3000"
+      - "6080-6090:3333"
     depends_on:
       - server
     networks:
       - frontend_network
     deploy:
-      replicas: 3  
+      replicas: 2 
       
 
  mongodb:
