@@ -47,7 +47,11 @@ services:
       - "27017:27017"
     networks:
       - backend_network   
-# volumes:
+    volumes:
+      - mongodb_data:/data/db  
+volumes:
+  mongodb_data:
+
 networks:
   backend_network:
   frontend_network:
