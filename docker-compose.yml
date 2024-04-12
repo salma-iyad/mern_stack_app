@@ -1,4 +1,4 @@
-version: '3.9'
+
 services:
  server:
      build:
@@ -19,7 +19,9 @@ services:
       - mongodb
      networks:
       - backend_network  
-      - frontend_network  
+      - frontend_network
+     deploy:
+       replicas: 2   
      
  client:
     build:
@@ -33,6 +35,8 @@ services:
       - server
     networks:
       - frontend_network
+    deploy:
+      replicas: 3  
       
 
  mongodb:
