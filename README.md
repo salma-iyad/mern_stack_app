@@ -43,9 +43,7 @@ MONGODB_DOCKER_PORT=27017
 Navigate to the root of the project directory and run:
     
     ```bash
-    bashCopy code
     docker-compose up --build
-    
     ```
     
     This command will:
