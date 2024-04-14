@@ -23,7 +23,6 @@ This documentation covers the architecture and deployment process of a MERN stac
 **Prerequisites:**
 
 - Docker and Docker Compose installed on your system.
-- Basic understanding of Docker, Docker Compose, and command line operations.
 
 **Environment Setup:**
 Ensure that the **`.env`** file is configured with the correct environment variables:
